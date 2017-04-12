@@ -8,46 +8,71 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 else
 {
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PHP Application - AWS Elastic Beanstalk</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster+Two" type="text/css">
-    <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/ico" >
-    <link rel="shortcut icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/ico" >
-    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="/styles.css" type="text/css">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/styles.css" type="text/css">
 </head>
 <body>
-    <section class="congratulations">
-        <h1>Congratulations!</h1>
-        <p>Your AWS Elastic Beanstalk <em>PHP</em> application is now running on your own dedicated environment in the AWS&nbsp;Cloud</p>
-        <p>You are running PHP version <?= phpversion() ?></p>
-        <p>Testing Beanstalk deploy via git</p>
-    </section>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="home"><i class="fa fa-coffee"></i> A+ Restbucks</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home">HOME</a></li>
+        <li><a href="/stores">STORES</a></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center headspace">    
+  <div class="row content">
+    <div class="col-sm-3 col-sm-offset-1"> 
+        <img src="assets/coffee-cup.jpg"/>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1 text-left"> 
+      <h3>Get your favourite coffee!</h3>
+      <hr>
+      <p>Coffee order form here!</p>
+    </div>
+    <div class="col-sm-2 col-sm-offset-1 sidenav">
+      <div>
+      <h4>Stores</h4>
+      </div>
+      </br>
+      <div class="well">
+        <a href="http://54.215.145.110:8000/mountainview target="_blank">Mountain View</a>
+      </div>
+      <div class="well">
+        <a href="http://54.215.145.110:8000/paloalto" target="_blank">Palo Alto</a>
+      </div>
+      <div class="well">
+        <a href="http://54.215.145.110:8000/sunnyvale" target="_blank">Sunnyvale</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section class="instructions">
-        <h2>What's Next?</h2>
-        <ul>
-            <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>
-            <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_PHP_eb.html">Deploying AWS Elastic Beanstalk Applications in PHP Using Eb and Git</a></li>
-            <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_PHP.rds.html">Using Amazon RDS with PHP</a>
-            <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/customize-containers-ec2.html">Customizing the Software on EC2 Instances</a></li>
-            <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/customize-containers-resources.html">Customizing Environment Resources</a></li>
-        </ul>
+<footer class="container-fluid text-center">
+  <p>Website create for SJSU CMPE-281 course.</p>
+</footer>
 
-        <h2>AWS SDK for PHP</h2>
-        <ul>
-            <li><a href="http://aws.amazon.com/sdkforphp">AWS SDK for PHP home</a></li>
-            <li><a href="http://aws.amazon.com/php">PHP developer center</a></li>
-            <li><a href="https://github.com/aws/aws-sdk-php">AWS SDK for PHP on GitHub</a></li>
-        </ul>
-    </section>
-
-    <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
 </body>
 </html>
 <? 
