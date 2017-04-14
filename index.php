@@ -1,17 +1,7 @@
-<?
-if ($_SERVER['REQUEST_METHOD'] === 'POST')
-{
-  $file = '/tmp/sample-app.log';
-  $message = file_get_contents('php://input');
-  file_put_contents($file, date('Y-m-d H:i:s') . " Received message: " . $message . "\n", FILE_APPEND);
-}
-else
-{
-?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>A+ Restbucks</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -49,7 +39,63 @@ else
     <div class="col-sm-3 col-sm-offset-1 text-left"> 
       <h3>Get your favourite coffee!</h3>
       <hr>
-      <p>Coffee order form here!</p>
+      <form action="orders/create.php" method="post">
+          <div class="form-group">
+            <label for="store">Store</label>
+            <select name="store" class="form-control">
+              <option value="mountainview">Mountain View</option>
+              <option value="paloalto">Palo Alto</option>
+              <option value="sunnyvale">Sunnyvale</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <select name="location" class="form-control">
+              <option value="takeout">Take Out</option>
+              <option value="dinein">Dine In</option>
+              <option value="delivery">Delivery</option>
+            </select>
+          </div>
+          <div class="form-group">
+              <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <select name="items[][quantity]" class="form-control">
+                  <option value=1>1</option>
+                  <option value=2>2</option>
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=5>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="type">Type</label>
+                <select name="items[][name]" class="form-control">
+                  <option value="latte">Latte</option>
+                  <option value="cappuccino">Cappuccino</option>
+                  <option value="mocha">Mocha</option>
+                  <option value="expresso">Expresso</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="milk">Milk</label>
+                <select name="items[][milk]" class="form-control">
+                  <option value="whole">Whole</option>
+                  <option value="skim">Skim</option>
+                  <option value="reducedfat">Reduced Fat</option>
+                  <option value="cream">Cream</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="size">Size</label>
+                <select name="items[][size]" class="form-control">
+                  <option value="small">Small</option>
+                  <option value="regular">Regular</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
     </div>
     <div class="col-sm-2 col-sm-offset-1 sidenav">
       <div>
@@ -75,6 +121,3 @@ else
 
 </body>
 </html>
-<? 
-} 
-?>
