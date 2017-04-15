@@ -7,6 +7,8 @@
 
     // TODO extract ip, port to config file
     $url = "http://54.215.145.110:8000/" . $store . "/order";
+ //   $url = "http://localhost:9090/v3/starbucks/order";
+//    echo $payload;
 
     // Setup cURL
     $ch = curl_init($url);

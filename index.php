@@ -51,15 +51,15 @@
           <div class="form-group">
             <label for="location">Location</label>
             <select name="location" class="form-control">
-              <option value="takeout">Take Out</option>
-              <option value="dinein">Dine In</option>
+              <option value="take-out">Take Out</option>
+              <option value="dine-in">Dine In</option>
               <option value="delivery">Delivery</option>
             </select>
           </div>
           <div class="form-group">
               <div class="form-group">
                 <label for="qty">Quantity</label>
-                <select name="items[][qty]" class="form-control">
+                <select name="items[0][qty]" class="form-control">
                   <option value=1>1</option>
                   <option value=2>2</option>
                   <option value=3>3</option>
@@ -69,7 +69,7 @@
               </div>
               <div class="form-group">
                 <label for="type">Type</label>
-                <select name="items[][name]" class="form-control">
+                <select name="items[0][name]" class="form-control">
                   <option value="latte">Latte</option>
                   <option value="cappuccino">Cappuccino</option>
                   <option value="mocha">Mocha</option>
@@ -78,7 +78,7 @@
               </div>
               <div class="form-group">
                 <label for="milk">Milk</label>
-                <select name="items[][milk]" class="form-control">
+                <select name="items[0][milk]" class="form-control">
                   <option value="whole">Whole</option>
                   <option value="skim">Skim</option>
                   <option value="reducedfat">Reduced Fat</option>
@@ -87,7 +87,7 @@
               </div>
               <div class="form-group">
                 <label for="size">Size</label>
-                <select name="items[][size]" class="form-control">
+                <select name="items[0][size]" class="form-control">
                   <option value="small">Small</option>
                   <option value="regular">Regular</option>
                   <option value="large">Large</option>
