@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !order.php
+RewriteRule .* order.php?url=$0 [QSA,L]
