@@ -1,14 +1,9 @@
 <?php
-    function debug($d) {
-        echo '<pre>' . var_export($d, true) . '</pre>';
-    }
+
     $store = array_shift($_POST);
     $payload = json_encode($_POST);
 
-    // TODO extract ip, port to config file
-    $url = "http://54.215.145.110:8000/" . $store . "/order";
- //   $url = "http://localhost:9090/v3/starbucks/order";
-//    echo $payload;
+    $url = $KONG_URL . "/" . $store . "/order";
 
     // Setup cURL
     $ch = curl_init($url);
@@ -27,11 +22,13 @@
     // Check for errors
     if($response === FALSE){
         die(curl_error($ch));
+        curl_close($ch);
     }
 
     // Decode the response
-    $responseData = json_decode($response, TRUE);
+    $orderData = json_decode($response, TRUE);
+    curl_close($ch);
 
-    // Print the date from the response
-    debug($responseData);
+    require 'show.view.php';
+
 ?>
