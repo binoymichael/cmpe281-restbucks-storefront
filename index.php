@@ -21,7 +21,7 @@
 
     $route = 'home.php';
     switch ($http_verb) {
-    case ('GET') : 
+    case ('GET') :
         if(match('/.*/order/.*', $path)) {
             $route = 'orders/show.php';
         } elseif(match('/.*/orders', $path)) {
@@ -47,7 +47,7 @@
         break;
     }
 
-    // look for store in url 
+    // look for store in url
     $stores = array("mountainview", "paloalto", "sunnyvale");
     $x = explode('/', $path)[1];
     if (in_array($x, $stores)) {
@@ -59,4 +59,3 @@
     require $route;
     require 'common/footer.php';
 ?>
-

@@ -29,6 +29,6 @@ if($httpcode == 204)
     {
       echo "<html><body><h2> Your order has been deleted </h2></body></html>"
     }
-// put a button to go back to homepage
+
 
 ?>
