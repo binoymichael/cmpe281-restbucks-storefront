@@ -1,30 +1,14 @@
-<html>
-<body>
-
 <?php
 extract($_GET);
 $store = $_GET["storeName"];
 $orderId = $_GET["orderNumber"];
 
-echo $orderId."<br>";
+$url = $KONG_URL . "/" . $store . "/order"."/".$orderId;
 
-
-//$url = "http://127.0.0.1:9090/" . $store . "/order";
-$url = "http://localhost:9090" . "/order"."/".$orderId;
-echo $url."<br>";
-
-$json='';
-
-$ch = curl_init();
-$url = trim($url);
+$ch = curl_init($url);
 curl_setopt($ch, CURLOPT_URL,$url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
-curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER , array(
-    'Content-Type: application/json'
-));
-
 
 
 // Send the request
@@ -38,13 +22,13 @@ if($response === FALSE){
 }
 
 // Decode the response
-$responseData = json_decode($response, TRUE);
+$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-echo '<pre>' . var_export($responseData, true) . '</pre>';
-
+if($httpcode == 204)
+    {
+      echo "<html><body><h2> Your order has been deleted </h2></body></html>"
+    }
+// put a button to go back to homepage
 
 ?>
-
-</body>
-</html>
