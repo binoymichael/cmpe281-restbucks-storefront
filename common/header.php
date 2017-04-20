@@ -7,25 +7,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/styles.css" type="text/css">
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="home"><i class="fa fa-coffee"></i> A+ Restbucks</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+
+      <ul>
         <li><a href="/home">HOME</a></li>
         <li><a href="/stores">STORES</a></li>
-        <li><a href="/about">ABOUT</a></li>
+        <li style="float:right"><a class="active" href="/about">About</a></li>
       </ul>
-    </div>
-  </div>
-</nav>
-

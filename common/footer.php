@@ -1,6 +1,6 @@
+<head>
 <footer class="container-fluid text-center">
-  <p>Website create for SJSU CMPE-281 course.</p>
+  <h2> Fresh Coffee, fast service!!</h2>
 </footer>
 </body>
 </html>
-
