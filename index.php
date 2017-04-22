@@ -6,7 +6,7 @@
 
     // Helper functions
     function match($_pattern, $_path) {
-        $_pattern = '/' . str_replace('/', '\/', $_pattern) . '/';
+        $_pattern = '/^' . str_replace('/', '\/', $_pattern) . '$/';
         return (preg_match($_pattern, $_path) ? true : false);
     }
 

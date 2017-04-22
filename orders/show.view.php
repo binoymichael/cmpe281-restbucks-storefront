@@ -1,4 +1,3 @@
-// $store and $orderData should be populated before rendering this page
 <?php
     $orderId = $orderData['id'];
     $getOrderUrl = '/' . $store . '/order/' . $orderId;
@@ -12,7 +11,9 @@
       <hr>
       <a href=<?= $getOrderUrl ?>  class="btn btn-primary">Order Status<a> 
       <a href=<?= $deleteOrderUrl ?> class="btn btn-danger">Cancel Order<a> 
-      <a href=<?= $payOrderUrl ?> class="btn btn-success">Pay<a> 
+      <form action=<?=$payOrderUrl?> class="form-inline" method="post">
+          <button type="submit" class="btn btn-success">Pay</button>
+      </form>
     </div>
   </div>
 </div>
