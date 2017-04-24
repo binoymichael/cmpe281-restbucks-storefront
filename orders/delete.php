@@ -1,9 +1,16 @@
 <?php
-extract($_GET);
-$store = $_GET["storeName"];
-$orderId = $_GET["orderNumber"];
 
-$url = $KONG_URL . "/" . $store . "/order"."/".$orderId;
+$tmp = explode('/', $path);
+$orderId = array_pop($tmp);
+//extract($_POST);
+//$store = $_POST["storeName"];
+//$orderId = $_POST["orderNumber"];
+//echo "---delete.php--store--" . $store;
+//echo "---delete.php---id-" . $orderId;
+
+
+
+$url = $KONG_URL . "/" . $store . "/order/" . $orderId;
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_URL,$url);
@@ -21,14 +28,11 @@ if($response === FALSE){
     curl_close($ch);
 }
 
-// Decode the response
-$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);
+  // Decode the response
+    $orderData = json_decode($response, TRUE);
+    $orderData['id']=$orderId;
+    curl_close($ch);
 
-if($httpcode == 204)
-    {
-      echo "<html><body><h2> Your order has been deleted </h2></body></html>"
-    }
-
+    require 'show.view.php';
 
 ?>

@@ -34,6 +34,9 @@
         } elseif(match('/.*/order/.*/pay', $path)) {
             $route = 'orders/pay.php';
         }
+        elseif(match('/.*/order/.*', $path)){
+             $route = 'orders/delete.php';
+        }
         break;
     case ('PUT') :
         if(match('/.*/order/.*', $path)) {
@@ -53,7 +56,8 @@
     if (in_array($x, $stores)) {
         $store = $x;
     }
-
+   // debug($_SERVER);
+    echo  $route;
     require 'common/header.php';
     // $route is similar to a controller file
     require $route;
