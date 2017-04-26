@@ -24,10 +24,10 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
 </head>
 <body>
 <div class="container">
-  <h2>List of Orders</h2>
+  <h2 style='text-align:center;'>Orders</h2>
 <?php
      
-
+    //echo $path;
    // $url = $KONG_URL . "/" . $store . "/orders";
     $url = "http://localhost:9090" . "/orders";
     //echo $url."<br>";
@@ -60,7 +60,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
     $orderData = json_decode($response, TRUE);
     curl_close($ch);
 
-   // echo '<pre>' . var_export($orderData, true) . '</pre>';
+   //echo '<pre>' . var_export($orderData, true) . '</pre>';
    // echo "length :". sizeof($orderData);
 
        echo "<table class =\"table\" >"; 
@@ -70,9 +70,16 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
             "<th>Milk</th>" ."<th>Size</th>" ."<th>Status</th>";
        echo "</thead>" . "<tbody>";
  foreach ($orderData as $order){
-  
+
+
+ 
+  if($order!="Orders not found"){
+ 
    retrieveValues($order);
-     
+  }
+   else{
+       echo "<h3>" .$order."</h3>";
+   }  
 
  }
 
