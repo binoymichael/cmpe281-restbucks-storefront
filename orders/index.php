@@ -24,7 +24,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
 </head>
 <body>
 <div class="container">
-  <h2 style='text-align:center;'>Orders</h2>
+  <h2 style=''>Orders</h2>
 <?php
      
     //echo $path;
@@ -67,7 +67,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
        echo "<thead >";
        echo "<tr>" ;
        echo "<th>Order ID</th>". "<th>Location</th>" ."<th>Quantity</th>". "<th>Name</th>".
-            "<th>Milk</th>" ."<th>Size</th>" ."<th>Status</th>";
+            "<th>Milk</th>" ."<th>Size</th>" ."<th>Status</th>" . "<th>Actions</th>";
        echo "</thead>" . "<tbody>";
  foreach ($orderData as $order){
 
@@ -75,7 +75,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
  
   if($order!="Orders not found"){
  
-   retrieveValues($order);
+   retrieveValues($order, $store);
   }
    else{
        echo "<h3>" .$order."</h3>";
@@ -84,7 +84,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
  }
 
  
-    function retrieveValues($orderData){
+    function retrieveValues($orderData, $store){
    
        
         foreach ($orderData as $key => $value){
@@ -96,19 +96,18 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
                 $size = $orderData['items'][0]['size'];
                 $orderLocation = $orderData['location'];
                 $orderStatus = $orderData['status'];
+                $orderUrl = $store . '/order/' . $orderID;
                                
             }
               echo "<tr>"; 
               echo "<td >"  .$orderID . "</td>"; 
-              echo "<td >"  .$orderLocation . "</td>"; 
+              echo "<td >"  . ucwords($orderLocation) . "</td>"; 
               echo "<td >"  .$qty . "</td>"; 
-              echo "<td >"  .$name . "</td>"; 
-              echo "<td '>"  .$milk . "</td>"; 
-              echo "<td >"  .$size . "</td>"; 
-              echo "<td >"  .$orderStatus . "</td>"; 
-            echo "</tr>"; 
-            
-     
+              echo "<td >"  . ucwords($name) . "</td>"; 
+              echo "<td '>"  . ucwords($milk) . "</td>"; 
+              echo "<td >"  . ucwords($size) . "</td>"; 
+              echo "<td >"  . ucwords($orderStatus) . "</td>"; 
+              echo "<td ><a href='" . $orderUrl . "'>View</a></tr>"; 
         }
 
    echo "</tbody>"."</table>";
