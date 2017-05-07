@@ -28,8 +28,8 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
 <?php
      
     //echo $path;
-   // $url = $KONG_URL . "/" . $store . "/orders";
-    $url = "http://localhost:9090" . "/orders";
+    $url = $KONG_URL . "/" . $store . "/orders";
+   // $url = "http://localhost:9090" . "/orders";
     //echo $url."<br>";
   
     //echo "<h3>" . $store . "</h3>";
