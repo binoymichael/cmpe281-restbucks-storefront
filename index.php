@@ -57,7 +57,6 @@
         $store = $x;
     }
    // debug($_SERVER);
-    echo  $route;
     require 'common/header.php';
     // $route is similar to a controller file
     require $route;
