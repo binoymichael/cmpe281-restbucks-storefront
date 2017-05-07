@@ -96,7 +96,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
                 $size = $orderData['items'][0]['size'];
                 $orderLocation = $orderData['location'];
                 $orderStatus = $orderData['status'];
-                $orderUrl = $store . '/order/' . $orderID;
+                $orderUrl = '/' . $store . '/order/' . $orderID;
                                
             }
               echo "<tr>"; 
