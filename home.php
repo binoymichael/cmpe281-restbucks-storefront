@@ -70,13 +70,13 @@
       </div>
       </br>
       <div class="well">
-      <a href="<?= $KONG_URL ?>/mountainview" target="_blank">Mountain View</a>
+      <a href="/mountainview/orders" target="_blank">Mountain View</a>
       </div>
       <div class="well">
-        <a href="<?= $KONG_URL ?>/paloalto" target="_blank">Palo Alto</a>
+        <a href="/paloalto/orders" target="_blank">Palo Alto</a>
       </div>
       <div class="well">
-        <a href="<?= $KONG_URL ?>/sunnyvale" target="_blank">Sunnyvale</a>
+        <a href="/sunnyvale/orders" target="_blank">Sunnyvale</a>
       </div>
     </div>
   </div>
