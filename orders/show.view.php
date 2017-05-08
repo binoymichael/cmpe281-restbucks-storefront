@@ -12,7 +12,7 @@
     $payOrderUrl = '/' . $store . '/order/' . $orderId . '/pay';
     $editOrderUrl = '/' . $store . '/order/' . $orderId . '/edit';
     $getOrdersUrl = '/' . $store . '/orders';
-    echo "order ID :".$orderId;
+    //echo "order ID :".$orderId;
 ?>
 <div class="container-fluid headspace">    
     <div class="col-sm-6 col-sm-offset-1 text-left"> 
@@ -43,6 +43,7 @@
     </div>
     <div class="col-sm-5 col-sm-offset-1 text-left"> 
       <a href=<?= $getOrderUrl ?>  class="btn btn-primary" style='margin-bottom:20px;'>Order Status<a> 
+      <a href=<?= $editOrderUrl ?>  class="btn btn-primary" style='margin-bottom:20px;'>Edit Order<a>
       <form action=<?=$deleteOrderUrl?>  method="post">
           <button type="submit" class="btn btn-danger" style='margin-bottom:20px;'>Cancel Order</button>
       </form>
