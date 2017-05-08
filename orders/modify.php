@@ -6,7 +6,6 @@
   $url = $KONG_URL . "/" . $store . "/order/" . $orderId;
     $payload = json_encode($_POST);
 
-    debug($payload);
 
     $url = $KONG_URL . "/" . $store . "/order" .
 
