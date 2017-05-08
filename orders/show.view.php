@@ -41,15 +41,15 @@
       </dl>
     </div>
     <div class="col-sm-5 col-sm-offset-1 text-left"> 
-      <a href=<?= $getOrderUrl ?>  class="btn btn-primary">Order Status<a> 
+      <a href=<?= $getOrderUrl ?>  class="btn btn-primary" style='margin-bottom:20px;'>Order Status<a> 
       <form action=<?=$deleteOrderUrl?>  method="post">
-          <button type="submit" class="btn btn-danger">Cancel Order</button>
+          <button type="submit" class="btn btn-danger" style='margin-bottom:20px;'>Cancel Order</button>
       </form>
       <form action=<?=$payOrderUrl?> class="form-inline" method="post">
-          <button type="submit" class="btn btn-success">Pay</button>
+          <button type="submit" class="btn btn-success" style='margin-bottom:20px;'>Pay</button>
       </form>
       <form action=<?=$getOrdersUrl?> class="form-inline" method="get">
-          <button type="submit" class="btn btn-success">Get Orders</button>
+          <button type="submit" class="btn btn-success" style='margin-bottom:20px;'>Get Orders</button>
       </form>
     </div>
   </div>
