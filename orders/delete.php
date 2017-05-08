@@ -33,6 +33,6 @@ if($response === FALSE){
     $orderData['id']=$orderId;
     curl_close($ch);
 
-    require 'show.view.php';
+    require 'delete.view.php';
 
 ?>
