@@ -22,7 +22,10 @@
     $route = 'home.php';
     switch ($http_verb) {
     case ('GET') :
-        if(match('/.*/order/.*', $path)) {
+        if(match('/.*/order/.*/edit', $path)) {
+          $route = 'orders/edit.php';
+          }
+        elseif(match('/.*/order/.*', $path)) {
             $route = 'orders/show.php';
         } elseif(match('/.*/orders', $path)) {
             $route = 'orders/index.php';
@@ -34,9 +37,11 @@
         } elseif(match('/.*/order/.*/pay', $path)) {
             $route = 'orders/pay.php';
         }
+
         elseif(match('/.*/order/.*', $path)){
              $route = 'orders/delete.php';
         }
+
         break;
     case ('PUT') :
         if(match('/.*/order/.*', $path)) {

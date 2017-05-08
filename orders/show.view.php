@@ -4,15 +4,17 @@
     $getOrderUrl = '/' . $store . '/order/' . $orderId;
     $deleteOrderUrl = '/' . $store . '/order/' . $orderId;
     $payOrderUrl = '/' . $store . '/order/' . $orderId . '/pay';
+    $editOrderUrl = '/' . $store . '/order/' . $orderId . '/edit';
     $getOrdersUrl = '/' . $store . '/orders';
-    //echo "order ID :".$orderId;
+    echo "order ID :".$orderId;
 ?>
-<div class="container-fluid text-center headspace">    
+<div class="container-fluid text-center headspace">
   <div class="row content">
-    <div class="col-sm-6 col-sm-offset-1 text-left"> 
+    <div class="col-sm-6 col-sm-offset-1 text-left">
     <h3><?= $orderData['message'] ?></h3>
       <hr>
-      <a href=<?= $getOrderUrl ?>  class="btn btn-primary">Order Status<a> 
+      <a href=<?= $getOrderUrl ?>  class="btn btn-primary">Order Status<a><br>
+      <a href=<?= $editOrderUrl ?>  class="btn btn-primary">Edit Order<a>
       <form action=<?=$deleteOrderUrl?>  method="post">
           <button type="submit" class="btn btn-danger">Cancel Order</button>
       </form>
