@@ -1,7 +1,7 @@
 <div class="container-fluid text-center headspace">
   <div class="row content">
     <div class="col-sm-3 col-sm-offset-1">
-        <img src="assets/coffee-cup.jpg"/>
+        <img src="assets/Starbucks.jpg" height="300" width="300"/>
     </div>
     <div class="col-sm-3 col-sm-offset-1 text-left">
       <h3>Get your favourite coffee!</h3>
