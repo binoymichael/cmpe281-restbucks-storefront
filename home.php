@@ -76,7 +76,7 @@
         <a href="/paloalto/orders" target="_blank">Palo Alto</a>
       </div>
       <div class="well">
-        <a href="/sunnyvale/order" target="_blank">Sunnyvale</a>
+        <a href="/sunnyvale/orders" target="_blank">Sunnyvale</a>
       </div>
     </div>
   </div>
