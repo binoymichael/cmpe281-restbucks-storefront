@@ -1,9 +1,14 @@
 <?php
+  $tmp = explode('/', $path);
+  array_pop($tmp);
+  $orderId = array_pop($tmp);
 
-    $store = array_shift($_POST);
+  $url = $KONG_URL . "/" . $store . "/order/" . $orderId;
     $payload = json_encode($_POST);
 
-    $url = $KONG_URL . "/" . $store . "/order";
+    debug($payload);
+
+    $url = $KONG_URL . "/" . $store . "/order" .
 
     //setting up curl to send the payload
 

@@ -34,10 +34,11 @@
     case ('POST') :
         if(match('/order', $path)) {
             $route = 'orders/create.php';
-        } elseif(match('/.*/order/.*/pay', $path)) {
+          } elseif(match('/.*/order/.*/update', $path)) {
+              $route = 'orders/modify.php';
+          } elseif(match('/.*/order/.*/pay', $path)) {
             $route = 'orders/pay.php';
         }
-
         elseif(match('/.*/order/.*', $path)){
              $route = 'orders/delete.php';
         }
