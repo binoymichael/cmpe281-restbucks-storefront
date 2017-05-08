@@ -1,3 +1,6 @@
+<?php
+$updateUrl = "/" . $store . "/order/" . $orderData['id'] . "/update";
+ ?>?>
 <div class="container-fluid text-center headspace">
   <div class="row content">
     <div class="col-sm-3 col-sm-offset-1">
@@ -6,7 +9,7 @@
     <div class="col-sm-3 col-sm-offset-1 text-left">
       <h3>Update your Order</h3>
       <hr>
-      <form action="/order" method="post">
+      <form action="<?= $updateUrl ?>" method="post">
           <div class="form-group">
             <label for="location">Update Location</label>
             <select name="location" class="form-control">
