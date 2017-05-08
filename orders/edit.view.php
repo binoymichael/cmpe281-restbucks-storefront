@@ -1,6 +1,6 @@
 <?php
 $updateUrl = "/" . $store . "/order/" . $orderData['id'] . "/update";
- ?>?>
+ ?>
 <div class="container-fluid text-center headspace">
   <div class="row content">
     <div class="col-sm-3 col-sm-offset-1">
