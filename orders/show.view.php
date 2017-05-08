@@ -48,9 +48,9 @@
       <form action=<?=$payOrderUrl?> class="form-inline" method="post">
           <button type="submit" class="btn btn-success" style='margin-bottom:20px;'>Pay</button>
       </form>
-      <form action=<?=$getOrdersUrl?> class="form-inline" method="get">
+      <!--<form action=<?=$getOrdersUrl?> class="form-inline" method="get">
           <button type="submit" class="btn btn-success" style='margin-bottom:20px;'>Get Orders</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </div>
