@@ -63,3 +63,7 @@
 a, a:hover {
 	color: #00aa00;
 }
+
+dt, dd { float: left; font-size: 1.2em; }
+dt, dd { margin-left: 10px; }
+dt { clear:both }
