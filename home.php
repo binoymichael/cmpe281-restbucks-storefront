@@ -3,8 +3,8 @@
     <div class="col-sm-3 col-sm-offset-1">
         <img src="assets/Starbucks.jpg" height="300" width="300"/>
     </div>
-    <div class="col-sm-3 col-sm-offset-1 text-left">
-      <h3>Get your favourite coffee!</h3>
+    <div class="col-sm-3 col-sm-offset-1 text-left" >
+      <h3 style='color:green;font-family: "Indie Flower", cursive;'><b>Get your favourite Coffee . . .</b></h3>
       <hr>
       <form action="/order" method="post">
           <div class="form-group">
@@ -61,12 +61,12 @@
                 </select>
               </div>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-success" style='text-align:"right";margin-left: 120px;'>Submit</button>
       </form>
     </div>
     <div class="col-sm-2 col-sm-offset-1 sidenav">
-      <div>
-      <h4>Stores</h4>
+      <div style='font-family: Sofia;'>
+      <h4 >Stores</h4>
       </div>
       </br>
       <div class="well">

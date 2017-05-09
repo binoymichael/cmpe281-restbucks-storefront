@@ -17,7 +17,7 @@
 <div class="container-fluid headspace">    
     <div class="col-sm-6 col-sm-offset-1 text-left"> 
       <div class="page-header">
-        <h3><?= $orderData['message'] ?></h3>
+        <h3 style='color:green;font-family: "Indie Flower", cursive;'> <b><?= $orderData['message'] ?></b></h3>
       </div>
     </div>
   <div class="row content">

@@ -1,6 +1,6 @@
 <head>
-<footer class="container-fluid text-center">
-  <h2> Fresh Coffee, fast service!!</h2>
+<footer >
+  <h2> Fresh Coffee, Fast Service!!</h2>
 </footer>
 </body>
 </html>

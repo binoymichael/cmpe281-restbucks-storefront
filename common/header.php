@@ -33,14 +33,14 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #00592D;
 }
 </style>
 </head>
 <body>
 
-      <ul>
+      <ul style='color:green;font-family: "Indie Flower", cursive;'>
         <li><a href="/home">HOME</a></li>
         <li><a href="/stores">STORES</a></li>
-        <li style="float:right"><a class="active" href="/about">About</a></li>
+        <li style="float:right ; color:00592D;"><a class="active" href="/about">About</a></li>
       </ul>

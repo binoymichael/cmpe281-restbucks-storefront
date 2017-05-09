@@ -7,7 +7,7 @@ $updateUrl = "/" . $store . "/order/" . $orderData['id'] . "/update";
         <img src="/assets/coffee-cup.jpg"/>
     </div>
     <div class="col-sm-3 col-sm-offset-1 text-left">
-      <h3>Update your Order</h3>
+      <h3><b>Update your Order</b></h3>
       <hr>
       <form action="<?= $updateUrl ?>" method="post">
           <div class="form-group">
@@ -56,7 +56,7 @@ $updateUrl = "/" . $store . "/order/" . $orderData['id'] . "/update";
                 </select>
               </div>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-success" style='text-align:"right";margin-left: 120px;'>Submit</button>
       </form>
     </div>
     <div class="col-sm-2 col-sm-offset-1 sidenav">
