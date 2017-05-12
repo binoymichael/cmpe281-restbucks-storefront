@@ -15,7 +15,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Orders</title>
+  <title >Orders</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,7 +24,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
 </head>
 <body>
 <div class="container">
-  <h2 style=''>Orders</h2>
+  <h2 style='color:green;font-family: "Indie Flower", cursive;text-align:center;'><b>Orders</b></h2>
 <?php
      
     //echo $path;
@@ -65,7 +65,7 @@ if($_SERVER['PHP_AUTH_USER'] !=='admin' && $_SERVER['PHP_AUTH_PW']!=='admin'){
 
        echo "<table class =\"table\" >"; 
        echo "<thead >";
-       echo "<tr>" ;
+       echo "<tr style='color:green;font-family: \"Indie Flower\", cursive;'>" ;
        echo "<th>Order ID</th>". "<th>Location</th>" ."<th>Quantity</th>". "<th>Name</th>".
             "<th>Milk</th>" ."<th>Size</th>" ."<th>Status</th>" . "<th>Actions</th>";
        echo "</thead>" . "<tbody>";
