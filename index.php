@@ -38,21 +38,9 @@
               $route = 'orders/modify.php';
           } elseif(match('/.*/order/.*/pay', $path)) {
             $route = 'orders/pay.php';
-        }
-        elseif(match('/.*/order/.*', $path)){
+          } elseif(match('/.*/order/.*/delete', $path)){
              $route = 'orders/delete.php';
-        }
-
-        break;
-    case ('PUT') :
-        if(match('/.*/order/.*', $path)) {
-            $route = 'orders/update.php';
-        }
-        break;
-    case ('DELETE') :
-        if(match('/.*/order/.*', $path)) {
-            $route = 'orders/delete.php';
-        }
+          }
         break;
     }
 

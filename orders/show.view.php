@@ -8,7 +8,7 @@
     $orderLocation = $orderData['location'];
     $orderStatus = $orderData['status'];
     $getOrderUrl = '/' . $store . '/order/' . $orderId;
-    $deleteOrderUrl = '/' . $store . '/order/' . $orderId;
+    $deleteOrderUrl = '/' . $store . '/order/' . $orderId . '/delete';
     $payOrderUrl = '/' . $store . '/order/' . $orderId . '/pay';
     $editOrderUrl = '/' . $store . '/order/' . $orderId . '/edit';
     $getOrdersUrl = '/' . $store . '/orders';
