@@ -1,6 +1,7 @@
 <?php
 
 $tmp = explode('/', $path);
+array_pop($tmp);
 $orderId = array_pop($tmp);
 //extract($_POST);
 //$store = $_POST["storeName"];
